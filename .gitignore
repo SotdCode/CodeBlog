@@ -25,3 +25,7 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
+Blog/database.sql
+database.sql
+Blog/settings.py
+codetalk.io/*
