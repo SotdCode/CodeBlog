@@ -24,9 +24,12 @@
         <link rel="stylesheet" type="text/css" media="screen, projection" href="{{ STATIC_URL }}zinnia/css/ie.css" />
     <![endif]-->
     {% block link %}{% endblock %}
-    {% block script %}{% endblock %}
-    <script type="text/javascript">
+    {% block script %}
+    <script src="{{ STATIC_URL }}js/google-code-prettify/prettify.js" type="text/javascript" charset="utf-8" />
+    <script src="{{ STATIC_URL }}js/google-code-prettify/lang-hs.js" type="text/javascript" charset="utf-8" />
+    {% endblock %}
     
+    <script type="text/javascript">
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-33215058-1']);
       _gaq.push(['_trackPageview']);
@@ -36,10 +39,10 @@
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
-    
     </script>
+    
   </head>
-  <body class="zinnia {% block body-class %}{% endblock %}">
+  <body class="zinnia {% block body-class %}{% endblock %}" onload="prettyPrint()">
     <div id="header">
       <div id="header-inner">
         <div id="header-left">

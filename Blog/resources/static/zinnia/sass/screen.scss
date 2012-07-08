@@ -7,7 +7,7 @@
 @import "blueprint";
 @import "susy";
 // Import bootstrap
-@import "partials/bootstrap";
+/*@import "partials/bootstrap";*/
 // Import the mixins
 @import "mixins/icons";
 @import "mixins/tag-cloud";
@@ -29,4 +29,7 @@
   @import "partials/linkbacks";
   @import "partials/paginator";
   @import "partials/django-fixes";
+  @import "partials/bootstrap";
+  @import "partials/bootstrap-override";
+  @import "partials/prettify";
 }
