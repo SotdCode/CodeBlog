@@ -3,7 +3,6 @@ form {
     display: block;
     font-weight: bold; }
   fieldset {
-    padding: 1.4em;
     border: 1px solid $border-color;
     margin: 0 0 1.5em 0; }
   legend {
@@ -22,8 +21,8 @@ form {
   textarea {
     margin: 0.5em 0;
     padding: 0.5em;
-    width: 70%;
-    height: 300px; }
+    width: 96%;
+    height: 80px; }
   select {
     margin: 0.5em 0;
   }
