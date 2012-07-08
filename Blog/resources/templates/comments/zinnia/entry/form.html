@@ -1,0 +1,26 @@
+{% load comments i18n %}
+{% load url from future %}
+<form action="{% comment_form_target %}" method="post" class="form-horizontal">
+  {% csrf_token %}
+  <fieldset>
+    <h3>{% trans "Post your comment" %}</h3>
+    <input type="hidden" name="next" value="{% url 'zinnia_discussion_success' %}"/>
+    {% for field in form %}
+    {% if field.is_hidden %}{{ field }}{% else %}
+    <div{% if field.errors %} class="control-group error" {% else %} class="control-group" {% endif %}{% ifequal field.name "honeypot" %} style="display:none;"{% endifequal %}>
+      <label class="control-label" for="id_{{ field.name }}">{{ field.label }}</label>
+      <div class="controls">
+        {{ field }}
+        <span class="help-inline">
+          {% if field.errors %}{{ field.errors }}{% endif %}
+        </span>
+      </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+    <p class="submit">
+      <input type="submit" name="submit" class="submit-post btn btn-success" value="{% trans "Post" %}" />
+      <input type="submit" name="preview" class="submit-preview btn btn-primary" value="{% trans "Preview" %}" />
+    </p>
+  </fieldset>
+</form>

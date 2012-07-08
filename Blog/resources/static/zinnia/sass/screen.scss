@@ -6,6 +6,8 @@
 // so that we can access their mixins.
 @import "blueprint";
 @import "susy";
+// Import bootstrap
+@import "partials/bootstrap";
 // Import the mixins
 @import "mixins/icons";
 @import "mixins/tag-cloud";
@@ -14,8 +16,8 @@
 // Combine the partials into a single screen stylesheet.
 // under the body.zinnia class to avoid interferences
 .zinnia {
-  @import "partials/fonts";
   @import "partials/page";
+  @import "partials/fonts";
   @import "partials/two-cols";
   @import "partials/forms";
   @import "partials/slider";
