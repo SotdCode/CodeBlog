@@ -12,6 +12,7 @@
   #header-inner {
     @include container;
     @include susy-grid-background;
+    max-width: 77em;
   }
 
   h1 {
