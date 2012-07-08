@@ -1,19 +1,22 @@
 #sidebar {
-  background: url("../img/side-bar-pattern.png");
-  width: 248px;
+  .widget {
+    background: white;
+    border: solid 1px #D2D2D2;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  .entry-widgets {
+    padding-top: 0;
+  }
+  
   h3 {
-    color:#90A2A7;
-    text-shadow: 0 1px 1px #E2E7E8;
+    color:#000;
     letter-spacing: 0.1em;
     
     padding: 0.5em;
     a {
-      color:#90A2A7;
-      text-shadow: 0 1px 1px #E2E7E8;
+      color:#000;
       letter-spacing: 0.1em;
-      &:hover {
-        text-decoration: none;
-      }
     }
   }
 

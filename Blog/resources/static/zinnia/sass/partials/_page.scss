@@ -1,14 +1,21 @@
 & {
   @include blueprint-typography(true);
   @include blueprint-interaction;
-  background: #fff repeat-x scroll left top;
+  background: #EFEFEF;
+  margin-top: 0;
   a {
     text-decoration: none;
-    &:hover { text-decoration: underline; }
+    &:hover { text-decoration: none; }
   }
   li {
     list-style-image: image-url("bullet.png");
   }
   img.help { cursor: help; }
+  
+  #content {
+    > h1 {
+      color: #000;
+    }
+  }
+  
 }
-

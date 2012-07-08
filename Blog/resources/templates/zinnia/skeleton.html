@@ -16,7 +16,7 @@
     <meta name="google-site-verification" content="MUJQII6LpYI2R8haErnZS7V2RgivXTi7G3-JCByUYSU" />
     {% block meta %}{% endblock %}
     <link rel="pingback" href="/xmlrpc/" />
-    <link rel="shortcut icon" href="{{ STATIC_URL }}zinnia/img/favicon.ico" />
+    <link rel="shortcut icon" href="{{ STATIC_URL }}/img/favicon.ico" />
     <link rel="home" href="{% url 'zinnia_entry_archive_index' %}" />
     <link rel="stylesheet" type="text/css" media="screen, projection" href="{{ STATIC_URL }}zinnia/css/screen.css" />
     <link rel="stylesheet" type="text/css" media="print" href="{{ STATIC_URL }}zinnia/css/print.css" />
@@ -40,6 +40,38 @@
     </script>
   </head>
   <body class="zinnia {% block body-class %}{% endblock %}">
+    <div id="header">
+      <div id="header-inner">
+        <div id="header-left">
+          <h1>
+            <a href="{% url 'zinnia_entry_archive_index' %}" title="CodeTalk's Blog" rel="home">
+              <img src="{{ STATIC_URL }}/img/header-title.png" alt="CodeTalk" title="Come on, don't be shy <3">
+            </a>
+          </h1>
+          {# <blockquote> #}
+          {#             <p>Just, you know, because we love you &lt;3.</p> #}
+          {#           </blockquote> #}
+        </div>
+        <ul id="header-right" class="top-navigation">
+          <li>
+            <a href="{% url 'zinnia_entry_archive_index' %}" title="CodeTalk's Blog" rel="home">
+              Blog
+            </a>
+          </li>
+           {# <li> #}
+           {#               <a href="{% url 'zinnia_sitemap' %}" title="{% trans "Sitemap" %}" class="sitemap"> #}
+           {#                 {% trans "Sitemap" %} #}
+           {#               </a> #}
+           {#             </li> #}
+           {#             <li> #}
+           {#               <a href="{% url 'zinnia_entry_latest_feed' %}" title="{% trans "RSS Feed of latest entries" %}" class="feeds"> #}
+           {#                 {% trans "RSS Feed" %} #}
+           {#               </a> #}
+           {#             </li> #}
+        </ul>
+      </div>
+    </div>
+    <div id="header-bottom"></div>
     <div class="container">
       {% block slider %}{% endblock %}
       <div id="content" class="hfeed">
@@ -70,47 +102,10 @@
         {% endblock %}
       </div>
       <div id="sidebar">
-        <div id="header">
-          <!-- <ul class="top-navigation">
-                    <li>
-                      <a href="{% url 'zinnia_sitemap' %}" title="{% trans "Sitemap" %}" class="sitemap">
-                        {% trans "Sitemap" %}
-                      </a>
-                    </li>
-                    <li>
-                      <a href="{% url 'zinnia_entry_latest_feed' %}" title="{% trans "RSS Feed of latest entries" %}" class="feeds">
-                        {% trans "RSS Feed" %}
-                      </a>
-                    </li>
-                  </ul> -->
-          <!-- <h1>
-            <a href="{% url 'zinnia_entry_archive_index' %}" title="Zinnia's Blog" rel="home">
-              CodeTalk/
-            </a>
-          </h1>
-          <blockquote>
-            <p>Just, you know, because we love you &lt;3.</p>
-          </blockquote> -->
-        </div>  
-        <div id="widget-welcome" class="widget">
-          <h3>
-            <a href="{% url 'zinnia_entry_archive_index' %}" title="CodeTalk's Blog" rel="home">
-                CodeTalk/
-              </a>
-          </h3>
-          <p>
-            Hai thar, click around a bit, we hope you like our humble
-            posts.
-            <br>
-            <span style="font-style:italic;">- Let the code speak to you</span>
-          </p>
-        </div>
         {% block sidebar %}
         {% endblock %}
       </div>
-      <div id="footer">
-        
-      </div>
+      <div id="footer"></div>
     </div>
   </body>
 </html>

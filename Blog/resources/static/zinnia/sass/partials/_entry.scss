@@ -1,12 +1,19 @@
 .hentry {
   margin-bottom: 1em;
+  background: white;
+  border: solid 1px #D2D2D2;
+  padding: 20px;
+  margin-bottom: 10px;
 }
 
 h2.entry-title {
   font-weight: bold;
   margin-bottom: 0;
-  border-bottom: 1px solid $border-color;
-  text-shadow: 1px 1px 0 #ccc;
+  font-family: 'ChunkFiveRegular', Arial, Helvetica, sans-serif;
+  a {
+    font-family: 'ChunkFiveRegular', Arial, Helvetica, sans-serif;
+    color: #000;
+  }
 }
 
 p.entry-info {
@@ -70,6 +77,25 @@ p.entry-info {
 
 .entry-shorturl {
   @include strong-icon("shorturl.png");
+}
+
+#comments {
+  background: white;
+  border: solid 1px #D2D2D2 !important;
+  padding: 20px;
+  margin-bottom: 10px;
+  padding-top: 0;
+}
+
+#comments-form {
+  background: white;
+  border: solid 1px #D2D2D2 !important;
+  padding: 20px;
+  margin-bottom: 10px;
+  
+  fieldset {
+    border: 0;
+  }
 }
 
 .entry-comments {

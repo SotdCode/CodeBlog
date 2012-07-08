@@ -1,22 +1,33 @@
+#header-bottom {
+  background: #1B1B1B;
+  height: 5px;
+}
 #header {
-  margin-top: 0.5em;
-  margin-bottom: 1em;
   border-bottom: 1px solid $border-color;
+  height: 15px;
+  background: #1B1B1B;
+  border-bottom: 1px solid #575656;
+  padding: 20px;
+  
+  #header-inner {
+    margin: -5px auto;
+    width: 85em;
+  }
 
   h1 {
-    margin-top: 0.5em;
     margin-bottom: 0;
-    font-size: 3em;
+    margin-top: -4px;
+    font-size: 2.5em;
     font-weight: normal;
-    font-family: 'Gill Sans', 'Futura', 'Helvetica Nueue', Helvetica, sans-serif;
-    
+    font-family: 'ChunkFiveRegular', Arial, Helvetica, sans-serif;
     a {
-        color:#90A2A7;
-        text-shadow: 0 1px 1px #E2E7E8;
-        letter-spacing: 0.1em;
+        color:#fff;
         &:hover {
             text-decoration:none;
-            color:#90A2A7;
+            color:#fff;
+        }
+        img {
+          margin-top: -5px;
         }
     }
   }
@@ -24,6 +35,16 @@
   .top-navigation {
     margin: 0;
     float: right;
+    padding-left: 0;
+    
+    li {
+      font-size: 1.5em;
+      a {
+        color: #fff;
+        font-weight: normal;
+      }
+    }
+    
     @include delimited-list("|");
     .sitemap {
       @include header-icon("sitemap.png");

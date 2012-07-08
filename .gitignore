@@ -29,3 +29,7 @@ Blog/database.sql
 database.sql
 Blog/settings.py
 codetalk.io/*
+
+.tm_properties
+Blog/resources/static/zinnia/.sass-cache/*
+uploads/*
