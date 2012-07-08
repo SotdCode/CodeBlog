@@ -25,24 +25,26 @@
   .container {
     @include container;
     @include susy-grid-background;
-  }
-  #header, #footer {
-    @include full;
+    margin-top: 20px;
   }
   $third: floor($total-cols / 3);
+  #header {
+    #header-left {
+      @include columns($third);
+      @include alpha;
+    }
+    #header-right {
+      @include columns(2 * $third);
+      text-align:right;
+    }
+  }
   #content {
     @include columns(2 * $third);
     @include alpha;
-    position: absolute;
-    top: 20px;
-    left: 248px;
   }
   #sidebar {
     @include columns($third);
     @include omega;
-    position: absolute;
-    top: 0;
-    left: 0;
   }
   @media (max-width: 650px) {
     #content, #sidebar {
