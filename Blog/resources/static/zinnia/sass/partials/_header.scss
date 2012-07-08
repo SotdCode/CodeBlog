@@ -10,8 +10,8 @@
   padding: 20px;
   
   #header-inner {
-    margin: -5px auto;
-    width: 85em;
+    @include container;
+    @include susy-grid-background;
   }
 
   h1 {
@@ -27,7 +27,7 @@
             color:#fff;
         }
         img {
-          margin-top: -5px;
+          margin-top: -10px;
         }
     }
   }
