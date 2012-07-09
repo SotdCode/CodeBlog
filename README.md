@@ -55,4 +55,17 @@ And zinnia also need the [compass-susy](http://susy.oddbird.net/ "Responsive gri
 
 ---
 
+## Get to it! ##
+
 Views are located in `/resources/templates` and static files (CSS, Js, images etc) are located in `/resources/static`.
+
+### Dev setup ###
+
+Simply follow the install instructions. When done, here is a few nifty commands you might need:
+
+For the local development server, run `./manage.py runserver`. In development environment, you won't have to worry much about doing collectstatic and such.
+
+To get mails going, set up a local mail debugging server with the following command `python -m smtpd -n -c DebuggingServer localhost:1025` (Django uses port 1025 by default for it's mail in dev mode).
+
+When you need to alter some SCSS files (never touch the CSS files directly!), in the case of zinnia, you jump to `Blog/resources/static/zinnia/` and start `compass watch`. Compass will then watch for changes in the directory and act accordingly to the `config.rb`, and compile the SCSS from from `sass/` to CSS in `css/`.
+
