@@ -26,6 +26,7 @@
     @include container;
     @include susy-grid-background;
     margin-top: 20px;
+    width: 1000px !important;
   }
   $third: floor($total-cols / 3);
   #header {

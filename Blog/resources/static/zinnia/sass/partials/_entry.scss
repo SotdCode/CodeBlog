@@ -23,7 +23,7 @@ p.entry-info {
 .entry-body {
   text-align: justify;
   padding-right: 0.5em;
-  font-size: 1.2em;
+  font-size: 1.1em;
   img {
     &, &.left {
     margin: 0 1.5em 1.5em 0;
@@ -64,12 +64,15 @@ p.entry-info {
   }
 }
 
-.entry-footer p {
-  margin: 0;
+.entry-footer {
+  height: 5px;
+  p {
+    margin: 0;
+  }
 }
 
 .entry-tags {
-  
+  float:left;
 }
 
 .entry-shorturl {
@@ -96,7 +99,7 @@ p.entry-info {
 }
 
 .entry-comments {
-
+  float:right;
 }
 
 .entry-widgets {
